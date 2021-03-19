@@ -31,6 +31,7 @@ std::string EnvelopedSpringVertShader::Source()
 		"uniform mat4 sceneRot;\n"
 		"uniform mat4 trans;\n"
 		"out vec4 col;\n"
+		"out float age;\n"
 		"uniform mat4 proj;\n"
 		"uniform mat4 view;\n"
 		"float rand(vec2 co) {\n"
@@ -46,6 +47,7 @@ std::string EnvelopedSpringVertShader::Source()
 		"	z=amplitudeSin * exp(-t * t*expFrequencySin)*sin(sinFrequency*t + phase.y*s);\n"
 		"	gl_Position = (proj*view)*vec4(p.x+x, p.y-time, p.z+z, 1.0);\n"
 		"	col=vec4(1,1,1,1);\n"
+		"	age=time;\n"
 		"}\0";
 }
 

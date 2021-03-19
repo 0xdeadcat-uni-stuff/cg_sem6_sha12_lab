@@ -18,7 +18,7 @@ bool SphereGPUProgram::bindVertieces(VertexGenerator& vGen, float dT, float wT)
 	glGenBuffers(1, &VBO);
 
 	glBindVertexArray(VAO);
-	float p[6] = { -3.14f, 3.14f, 0.0314f, -3.14f, 3.14f, 0.0314f };
+	float p[6] = { -3.14f * 2, 3.14f * 2, 0.0314f * 2, -3.14f * 2, 3.14f * 2, 0.0314f * 2 };
 	float* vertices = vGen.generateVertieces(p);
 
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);

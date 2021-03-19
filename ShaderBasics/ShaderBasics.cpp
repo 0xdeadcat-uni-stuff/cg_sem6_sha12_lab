@@ -5,8 +5,8 @@
 #include "SphereScene.h"
 #include "ParticleScene.h"
 #include "ParticleEffect.h"
-//SphereScene<SphereGPUProgram, VertexGenerator> scene;
-ParticleScene<OnePointParticleEffect, OnePointParticleEffect> scene;
+SphereScene<SphereGPUProgram, VertexGenerator> scene;
+//ParticleScene<OnePointParticleEffect, OnePointParticleEffect> scene;
 
 void display() {
 	glEnable(GL_CULL_FACE);
